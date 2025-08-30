@@ -4,11 +4,11 @@ let current = 0;
 ///////////
 const creditDiv = document.getElementById('poster-credit');
 const creditTexts = [
-    'Texto de poster 1',
-    'Texto de poster 2',
-    'Texto de poster 3',
-    'Texto de poster 4',
-    'Texto de poster 5'
+    '© Belarusfilm / Mosfilm / Sovexportfilm',
+    '© Columbia Pictures / Sony Pictures Entertainment',
+    '© Les Productions Lazennec / Le Studio Canal+ / La Sept Cinéma / Kasso Inc. / MKL Distribution',
+    '© 20th Century Fox (y/o IFC Films según edición)',
+    'Fidélité Films / Wild Bunch / BIM Distribuzione'
 ];
 ///////////
 function showSlide(index) {
@@ -26,8 +26,14 @@ function showSlide(index) {
 }
 
 setInterval(() => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-}, 2000); // cambia cada 2 segundos
-
+    // Fade out el texto
+    creditDiv.style.opacity = '0';
+    // Espera el fade out antes de cambiar el texto y la imagen
+    setTimeout(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+        // Fade in el texto
+        creditDiv.style.opacity = '1';
+    }, 500); // 500ms para coincidir con la transición
+}, 2000);
 showSlide(current);
