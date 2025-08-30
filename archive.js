@@ -20,3 +20,4 @@ setInterval(() => {
 }, 2000); // cambia cada 2 segundos
 
 showSlide(current);
+
