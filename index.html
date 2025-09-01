@@ -11,30 +11,48 @@
 <body>
     <div class="membership-form">
         <a href="https://github.com/NANANAIM" target="_blank">
-            <h1 id="header">Filmoteca</h1>
+            <h1 id="header">Filmotecc</h1>
         </a>
 
         <p class="descripcion">
             Más que un archivo, un lugar vivo donde cada película que ves deja huella. 
             Un espacio para coleccionar, descubrir y compartir cine como si fuese tu propia biblioteca personal de historias en movimiento.
         </p>
-
+    <form class="sign-up-form" action="#" method="get">
         <fieldset class="form-fieldset">
             <p class="fieldset-texto">
                 <span class="informacion-fieldset">Completa la siguiente información para crear tu <span class="cuenta">cuenta:</span></span>
             </p>
             <div class="input-container">
-                <input type="text" id="full_name" name="full_name" aria-label="Full Name" placeholder="Full Name" minlength="3" required>
+                <input type="text" id="full_name" name="full_name" aria-label="Full Name" placeholder=" " minlength="3" required>
+                <label for="full_name" class="floating-label">Nombre:</label>
             </div>
 
             <div class="input-container">
-                <input type="email" id="email" name="email" aria-label="Email" placeholder="Email" required>
+                <input type="email" id="email" name="email" aria-label="Email" placeholder=" " required>
+                <label for="full_name" class="floating-label">Email:</label>
             </div>
 
             <div class="input-container">
-                <input type="tel" id="phone" name="phone" aria-label="Phone" placeholder="Phone" required>
+                <input type="tel" id="phone" name="phone" aria-label="Phone" placeholder=" " required>
+                <label for="full_name" class="floating-label">Teléfono:</label>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="password" name="password" aria-label="Password" placeholder=" " required>
+                <label for="full_name" class="floating-label">Contraseña:</label>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="confirm_password" name="confirm_password" aria-label="Confirm Password" placeholder=" " required>
+                <label for="full_name" class="floating-label">Confirmar Contraseña:</label>
             </div>
         </fieldset>
+        <p class="Boton-fieldset">
+            <button type="submit" class="submit-button">Crear Cuenta</button>
+        </p>
+    </form>
+    <span class="informacion-fieldset"> Si ya tienes una cuenta creada haz click<a href="#" > aquí</a>.</span>
     </div>
 
 

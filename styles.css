@@ -22,6 +22,7 @@ time, mark, audio, video {
     --color-fondo: #797878;
     --color-membership-form-default: #000000;
     --color-letras-default: #eaeaea;
+    --color-placeholder: #95ccff;
 }
 
 @font-face {
@@ -62,7 +63,6 @@ body{
     overflow: hidden;
 
     gap: 20px;
-    padding: 20px 0;
 }
 
 a{
@@ -99,7 +99,15 @@ a{
     max-width: 550px;
     min-width: 100px;
     letter-spacing: -0.6px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 fieldset {
@@ -124,6 +132,7 @@ span{
     font-family: 'FuenteDescripcion', Arial, sans-serif;
     font-size: 15px;
     font-style: italic;
+      animation: fadeInUp 0.8s ease;
 }
 
 .cuenta{
@@ -133,7 +142,8 @@ span{
 }
 
 .input-container {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    position: relative;
 }
 
 .input-container input {
@@ -146,12 +156,37 @@ span{
     color: var(--color-letras-default);
     background-color: var(--color-membership-form-default);
     background: transparent;
-    width: 100%;
+    width: 300px;
+    padding: 6px 0;
     border: none !important;
     border-bottom: 2px solid #eaeaea !important;
     background: transparent;
     box-sizing: border-box;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+}
+
+button.submit-button {
+    background-color: var(--color-placeholder);
+    color: #000;
+    border: none;
+    padding: 9px 24px;
+    font-size: 16px;
+    font-family:'FuenteDescripcion', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.informacion-fieldset {
+    color: var(--color-letras-default);
+    font-family: 'FuenteDescripcion', Arial, sans-serif;
+    font-size: 14px;
+}
+
+button.submit-button:hover {
+      filter: brightness(1.1);
 }
 
 #image-slider {
@@ -275,3 +310,22 @@ span{
   animation: fadeInUp 0.8s ease;
 }
 
+
+
+.floating-label {
+  font-family: 'FuenteDescripcion', Arial, sans-serif;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: var(--color-placeholder);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-container input:focus + .floating-label,
+.input-container input:not(:placeholder-shown) + .floating-label {
+  top: -8px;
+  font-size: 12px;
+  color: var(--color-placeholder);
+}
