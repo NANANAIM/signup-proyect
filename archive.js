@@ -38,4 +38,29 @@ setInterval(() => {
 }, 2000);
 showSlide(current);
 
+/////////
+const password = document.getElementById('password');
+const confirmPassword = document.getElementById('confirm-password');
+const message = document.getElementById('password-message');
+const submitBtn = document.querySelector('.submit-button');
+const form = document.querySelector('.sign-up-form');
 
+function checkPasswords() {
+  if (password.value !== confirmPassword.value) {
+    message.textContent = "Las contraseñas no coinciden";
+    message.style.color = "red";
+    submitBtn.disabled = true;
+  } else {
+    message.textContent = "";
+    submitBtn.disabled = false;
+  }
+}
+
+form.addEventListener('submit', function(e) {
+  if (password.value !== confirmPassword.value) {
+    e.preventDefault();
+    message.textContent = "Las contraseñas no coinciden";
+    message.style.color = "red";
+    // No deshabilites el botón aquí
+  }
+});

@@ -34,7 +34,7 @@
             </div>
 
             <div class="input-container">
-                <input type="tel" id="phone" name="phone" aria-label="Phone" placeholder=" " required>
+                <input type="tel" id="phone" name="phone" aria-label="Phone" placeholder=" " pattern="^\d+$"  pattern="^\d{10}$" title="Debe tener 10 números" required>
                 <label for="full_name" class="floating-label">Teléfono:</label>
             </div>
 
@@ -43,10 +43,11 @@
                 <label for="full_name" class="floating-label">Contraseña:</label>
             </div>
 
-            <div class="input-container">
-                <input type="password" id="confirm_password" name="confirm_password" aria-label="Confirm Password" placeholder=" " required>
+            <div class="input-container" id="ultimo">
+                <input type="password" id="confirm-password" name="confirm-password" aria-label="Confirm Password" placeholder=" " pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Debe tener al menos 8 caracteres, incluyendo letras y números" required >
                 <label for="full_name" class="floating-label">Confirmar Contraseña:</label>
             </div>
+            <span id="password-message"></span>
         </fieldset>
         <p class="Boton-fieldset">
             <button type="submit" class="submit-button">Crear Cuenta</button>
@@ -65,6 +66,6 @@
             <div id="poster-credit" class="poster-credit">Texto de poster 1</div>
         </div>
 
-                <script src="archive.js"></script>
+    <script src="archive.js"></script>
 </body>
 </html>

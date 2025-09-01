@@ -62,7 +62,7 @@ body{
     background-color: var(--color-membership-form-default);
     overflow: hidden;
 
-    gap: 20px;
+    gap: 15px;
 }
 
 a{
@@ -132,7 +132,8 @@ span{
     font-family: 'FuenteDescripcion', Arial, sans-serif;
     font-size: 15px;
     font-style: italic;
-      animation: fadeInUp 0.8s ease;
+    animation: fadeInUp 0.8s ease;
+    margin-bottom: 4px;
 }
 
 .cuenta{
@@ -165,6 +166,16 @@ span{
     color: #fff;
     font-size: 18px;
     outline: none;
+}
+
+#ultimo {
+    margin-bottom: 10px;
+}
+
+.password-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
 button.submit-button {
