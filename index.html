@@ -10,13 +10,31 @@
 
 <body>
     <div class="membership-form">
-        <h1 id="header">
-            Filmoteca
-        </h1>
+        <a href="https://github.com/NANANAIM" target="_blank">
+            <h1 id="header">Filmoteca</h1>
+        </a>
+
         <p class="descripcion">
             Más que un archivo, un lugar vivo donde cada película que ves deja huella. 
             Un espacio para coleccionar, descubrir y compartir cine como si fuese tu propia biblioteca personal de historias en movimiento.
         </p>
+
+        <fieldset class="form-fieldset">
+            <p class="fieldset-texto">
+                <span class="informacion-fieldset">Completa la siguiente información para crear tu <span class="cuenta">cuenta:</span></span>
+            </p>
+            <div class="input-container">
+                <input type="text" id="full_name" name="full_name" aria-label="Full Name" placeholder="Full Name" minlength="3" required>
+            </div>
+
+            <div class="input-container">
+                <input type="email" id="email" name="email" aria-label="Email" placeholder="Email" required>
+            </div>
+
+            <div class="input-container">
+                <input type="tel" id="phone" name="phone" aria-label="Phone" placeholder="Phone" required>
+            </div>
+        </fieldset>
     </div>
 
 

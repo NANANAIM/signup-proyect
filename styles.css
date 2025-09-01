@@ -18,6 +18,12 @@ time, mark, audio, video {
 	font: inherit;
 }
 
+:root {
+    --color-fondo: #797878;
+    --color-membership-form-default: #000000;
+    --color-letras-default: #eaeaea;
+}
+
 @font-face {
     font-family: 'FuenteHeader';
     src: url('BitcountPropDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
@@ -52,25 +58,101 @@ body{
     box-sizing: border-box;
     position: fixed;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--color-membership-form-default);
     overflow: hidden;
 
-    gap: 43px;
+    gap: 20px;
     padding: 20px 0;
 }
 
-h1{
+a{
+    text-decoration: none;
+}
+
+#header{
     color: #fff;
     text-align: center;
 
     font-family: 'FuenteHeader', Arial, sans-serif;
-    font-size: 56px;
+    font-size: 65px;
     font-weight: 800;
     letter-spacing: -2px;
-    margin-top: 20px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+#header:hover{
+    transform: scale(1.08);
+}
+
+.descripcion{
+    color: var(--color-letras-default);
+    box-sizing: border-box;
+    font-style: italic;
+    text-align: center;
+    text-wrap: wrap;
+    font-family: 'FuenteDescripcion', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    width:100%;
+    max-width: 550px;
+    min-width: 100px;
+    letter-spacing: -0.6px;
     margin-bottom: 20px;
 }
 
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 60%;
+  min-width: 200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.fieldset-texto {
+    margin-bottom: 15px;
+}
+
+span{
+    color: var(--color-letras-default);
+    font-family: 'FuenteDescripcion', Arial, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.cuenta{
+    text-decoration: underline;
+    text-decoration-color: var(--color-letras-default);
+    text-decoration-thickness: 1px;
+}
+
+.input-container {
+    margin-bottom: 25px;
+}
+
+.input-container input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    color: var(--color-letras-default);
+    background-color: var(--color-membership-form-default);
+    background: transparent;
+    width: 100%;
+    border: none !important;
+    border-bottom: 2px solid #eaeaea !important;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 20px;
+}
 
 #image-slider {
     position: fixed;
@@ -125,5 +207,71 @@ h1{
 
 .poster-credit {
     transition: opacity 0.5s, transform 0.5s;
+}
+
+@media (max-width: 700px) {
+  #image-slider {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .membership-form {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    position: static !important;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+/* Estilo para el autocompletado en Chrome/Safari */
+.input-container input:-webkit-autofill {
+  background: transparent !important;
+  -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+.input-container input:autofill {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+#header {
+  animation: fadeToRight 0.8s ease;
+}
+
+.descripcion {
+  animation: fadeInUp 0.8s ease;
 }
 

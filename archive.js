@@ -37,3 +37,5 @@ setInterval(() => {
     }, 500); // 500ms para coincidir con la transición
 }, 2000);
 showSlide(current);
+
+
