@@ -1,3 +1,5 @@
+/* Reset de estilos */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,6 +20,7 @@ time, mark, audio, video {
 	font: inherit;
 }
 
+/* Estilos de color */
 :root {
     --color-fondo: #797878;
     --color-membership-form-default: #000000;
@@ -25,9 +28,11 @@ time, mark, audio, video {
     --color-placeholder: #95ccff;
 }
 
+/* Estilos de fonts*/
+
 @font-face {
     font-family: 'FuenteHeader';
-    src: url('BitcountPropDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
+    src: url('../fonts/BitcountPropDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
     /* Usa 'woff' o 'woff2' si tu archivo es de ese tipo */
     font-weight: normal;
     font-style: normal;
@@ -35,7 +40,7 @@ time, mark, audio, video {
 
 @font-face {
     font-family: 'FuenteDescripcion';
-    src: url('Arimo-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Arimo-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -47,6 +52,8 @@ body{
     max-height: 100vh;
     background: #797878;
 }
+
+/* Estilos para el formulario de membresía */
 
 .membership-form{
     display: flex;
@@ -220,6 +227,8 @@ button.submit-button {
 button.submit-button:hover {
       filter: brightness(1.1);
 }
+
+/* Estilos para el slider de imágenes */
 
 #image-slider {
     position: fixed;

@@ -38,7 +38,7 @@ setInterval(() => {
 }, 2000);
 showSlide(current);
 
-/////////
+//////// Validación de contraseñas //////
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 const message = document.getElementById('password-message');
@@ -64,3 +64,4 @@ form.addEventListener('submit', function(e) {
     // No deshabilites el botón aquí
   }
 });
+
