@@ -80,6 +80,27 @@ a{
     margin-top: 10px;
     transition: transform 0.3s;
     display: inline-block;
+
+    animation: headerColorPulse 3s infinite alternate;
+}
+
+@keyframes headerColorPulse {
+  0% {
+    color: #fffbe6; /* Amarillo claro */
+    text-shadow: 0 0 10px #ffe4e1;
+  }
+  33% {
+    color: #e0f7fa; /* Azul claro */
+    text-shadow: 0 0 10px #e1f5fe;
+  }
+  66% {
+    color: #f3e5f5; /* Lila claro */
+    text-shadow: 0 0 10px #e1bee7;
+  }
+  100% {
+    color: #f8bbd0; /* Rosa claro */
+    text-shadow: 0 0 10px #fce4ec;
+  }
 }
 
 #header:hover{
@@ -160,10 +181,10 @@ span{
     width: 300px;
     padding: 6px 0;
     border: none !important;
-    border-bottom: 2px solid #eaeaea !important;
+    border-bottom: 2px solid var(--color-letras-default) !important;
     background: transparent;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--color-letras-default);
     font-size: 18px;
     outline: none;
 }
@@ -180,7 +201,7 @@ span{
 
 button.submit-button {
     background-color: var(--color-placeholder);
-    color: #000;
+    color: var(--color-membership-form-default);
     border: none;
     padding: 9px 24px;
     font-size: 16px;
@@ -313,14 +334,11 @@ button.submit-button:hover {
   color: #fff !important;
 }
 
-#header {
-  animation: fadeToRight 0.8s ease;
-}
+
 
 .descripcion {
   animation: fadeInUp 0.8s ease;
 }
-
 
 
 .floating-label {
