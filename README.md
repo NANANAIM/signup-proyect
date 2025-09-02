@@ -1,5 +1,11 @@
 <h2>Filmotecc - Proyecto de Registro de Usuarios</h2>
 <p>
+  <strong>¡Explora el proyecto en tu navegador!</strong><br>
+  <a href="file:///C:/Users/ferna/Downloads/signup-proyect/index.html" target="_blank">
+    Abrir Filmotecc - Registro de Usuarios
+  </a>
+</p>
+<p>
   <strong>Filmotecc</strong> es una página web de registro de usuarios inspirada en la experiencia de coleccionar y compartir cine. Incluye un formulario moderno y un slider de pósters de películas.
 </p>
 <ul>
